@@ -400,7 +400,7 @@ export default CalendarBase.extend({
             }
             const columns: VEventVisual[] = []
             visuals.forEach(other => {
-              if (other.columnCount === -1 && this.isSameColumn(visual, other)) {
+              if (other.columnCount === -1 && this.isSameColumn(visual, other) && this.isOverlapping(visual, other)) {
                 columns.push(other)
               }
             })
